@@ -11,12 +11,13 @@ spring:
   profiles: dev
   application:
     name: microservice-student
+
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/liuchunming?useUnicode=true&characterEncoding=utf8
+    type: com.alibaba.druid.pool.DruidDataSource  #当前数据源操作类型
+    driver-class-name: org.gjt.mm.mysql.Driver  #数据库驱动包
+    url: jdbc:mysql://localhost:3307/cloud-payment?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
     username: root
-    password: 123
+    password: sa110
   jpa:
     hibernate:
       ddl-auto: update
@@ -33,7 +34,7 @@ eureka:
       defaultZone: http://localhost:2004/eureka
 
 info:
-  groupId: com.liuchunming.testSpringcloud
+  groupId: com.bm.testSpringcloud
   artifactId: microservice-student-provider-config-1007
   version: 1.0-SNAPSHOT
   userName: http://liuchunming.com
@@ -49,11 +50,11 @@ spring:
   application:
     name: microservice-student
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/liuchunming?useUnicode=true&characterEncoding=utf8
+    type: com.alibaba.druid.pool.DruidDataSource  #当前数据源操作类型
+    driver-class-name: org.gjt.mm.mysql.Driver  #数据库驱动包
+    url: jdbc:mysql://localhost:3307/cloud-payment?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
     username: root
-    password: 123
+    password: sa110
   jpa:
     hibernate:
       ddl-auto: update
